@@ -1,0 +1,15 @@
+<h1 class="text-center">{{ data.currentExercise.name }}</h1>
+<div class="row">
+  <p>{{ data.currentExercise.muscle }}</p>
+  <p>{{ data.currentExercise.exercise_type }}</p>
+  <p>{{ data.currentExercise.difficulty }}</p>
+</div>
+<div class="row">
+  <a ng-click="returnBack()" class="btn btn-primary">Return</a>
+  <button class="btn btn-default" ng-click="editExercise()">Edit</button>
+  <button class="btn btn-danger" ng-click="deleteExercise()">Delete</button>
+</div>
+
+
+2014-06-12
+20140612

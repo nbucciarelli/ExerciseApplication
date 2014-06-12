@@ -1,0 +1,10 @@
+<h1 class="text-center">{{ title }}</h1>
+<a ng-click="navNewExercise()">New Exercise</a>
+<div class="row" ng-repeat="exercise in data.exercises">
+  <h2><a ng-click="viewExercise(exercise.id)">{{ exercise.name }}</a></h2>
+  <p>
+    {{ exercise.muscle }}
+    {{ exercise.exercise_type }}
+    {{ exercise.difficulty }}
+  </p>
+</div>
