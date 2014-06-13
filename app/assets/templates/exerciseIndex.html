@@ -3,8 +3,14 @@
 <div class="row" ng-repeat="exercise in data.exercises">
   <h2><a ng-click="viewExercise(exercise.id)">{{ exercise.name }}</a></h2>
   <p>
+    <strong>Muscle:</strong>
     {{ exercise.muscle }}
+    <br>
+    <strong>Type:</strong>
     {{ exercise.exercise_type }}
+    <br>
+    <strong>Difficulty:</strong>
     {{ exercise.difficulty }}
+    <br>
   </p>
 </div>

@@ -31,6 +31,6 @@
         / /.nav-collapse
     .container.theme-showcase{:role => "main"}
       - if notice || alert
-        %p.notice= notice
-        %p.alert= alert
+        .alert.alert-success= notice if notice
+        .alert.alert-danger= alert if alert
       = yield
