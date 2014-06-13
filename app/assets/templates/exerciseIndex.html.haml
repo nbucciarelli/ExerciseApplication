@@ -1,0 +1,15 @@
+%h1.text-center {{ title }}
+%a{"ng-click" => "navNewExercise()"} New Exercise
+.row
+  .list-group{"ng-repeat" => "exercise in data.exercises"}
+    %a.list-group-item{"ng-click" => "viewExercise(exercise.id)"}
+      %h4.list-group-item-heading {{ exercise.name }}
+      %p.list-group-item-text
+        %strong Muscle:
+        {{ exercise.muscle }}
+        %br
+        %strong Type:
+        {{ exercise.exercise_type }}
+        %br
+        %strong Difficulty:
+        {{ exercise.difficulty }}

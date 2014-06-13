@@ -1,0 +1,18 @@
+%form
+  %fieldset
+    %label
+      %strong Name
+      %input{"ng-model" => "formData.newExerciseName", :type => "text"}
+    %label
+      %strong Muscle
+      %input{"ng-model" => "formData.newExerciseMuscle", :type => "text"}
+    %label
+      %strong Exercise Type
+      %input{"ng-model" => "formData.newExerciseExerciseType", :type => "text"}
+    %label
+      %strong Difficulty
+      %input{"ng-model" => "formData.newExerciseDifficulty", :type => "text"}
+    %br
+    %button.btn.btn-primary{"ng-click" => "createExercise()"} Create
+    %button.btn.btn-danger.pull-right{"ng-click" => "clearExercise()"} Clear Exercise
+    %a{"ng-click" => "returnBack()"} Return
