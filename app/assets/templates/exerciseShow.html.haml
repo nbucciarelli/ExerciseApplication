@@ -4,6 +4,6 @@
   %p {{ data.currentExercise.exercise_type }}
   %p {{ data.currentExercise.difficulty }}
 .row
-  %a.btn.btn-primary{"ng-click" => "returnBack()"} Return
-  %button.btn.btn-default{"ng-click" => "editExercise()"} Edit
-  %button.btn.btn-danger{"ng-click" => "deleteExercise()"} Delete
+  %a.btn.btn-primary{ ng: {click: "returnBack()"} } Return
+  %button.btn.btn-default{ ng: {click: "editExercise()"} } Edit
+  %button.btn.btn-danger{ ng: {click: "deleteExercise()"} } Delete

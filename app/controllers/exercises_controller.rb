@@ -3,6 +3,7 @@ class ExercisesController < ApplicationController
     @exercises = Exercise.all
 
     respond_to do |format|
+      format.html
       format.json { render json: @exercises.as_json }
     end
   end

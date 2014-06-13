@@ -1,14 +1,14 @@
 !!!
-%html{lang: "en", ng: { app: "ExerciseApp"} }
+%html{lang: "en" }
   %head
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
-    / %link{:href => "../../assets/ico/favicon.ico", :rel => "shortcut icon"}
+    %link{ href: "/assets/favicon.ico", rel: "shortcut icon" }
     %title
-      {{ title }}
+      Exercise Application
     / Bootstrap core CSS
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', controller_name
@@ -25,7 +25,7 @@
     .navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
       .container
         .navbar-header
-          = link_to "Rails Application", root_path, class: "navbar-brand"
+          = link_to "Exercises", root_path, class: "navbar-brand"
         .navbar-collapse.collapse
           = render 'layouts/navbar'
         / /.nav-collapse

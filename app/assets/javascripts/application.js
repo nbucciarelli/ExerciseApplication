@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require underscore.min
+//= require underscore
 //= require bootstrap
-//= require angular.min
-//= require angular-route.min
+//= require angular
+//= require angular-route
