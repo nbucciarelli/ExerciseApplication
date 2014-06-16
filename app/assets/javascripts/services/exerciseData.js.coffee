@@ -1,14 +1,7 @@
 angular.module('ExerciseApp').factory('exerciseData', ['$http', ($http) ->
   exerciseData =
     data:
-      exercises: [
-        {
-          name: "temporar",
-          muscle: "temporary",
-          exercise_type: "temporary",
-          difficulty: "temporary"
-        }
-      ]
+      exercises: [ ]
     isLoaded: false
 
   exerciseData.loadExercises = (deferred) ->
@@ -32,7 +25,6 @@ angular.module('ExerciseApp').factory('exerciseData', ['$http', ($http) ->
     data = 
       exercise: 
         name: newExercise.newExerciseName
-        muscle: newExercise.newExerciseMuscle
         exercise_type: newExercise.newExerciseExerciseType
         difficulty: newExercise.newExerciseDifficulty
 
@@ -49,14 +41,12 @@ angular.module('ExerciseApp').factory('exerciseData', ['$http', ($http) ->
     data =
       exercise:
         name: editExercise.editExerciseName
-        muscle: editExercise.editExerciseMuscle
         exercise_type: editExercise.editExerciseExerciseType
         difficulty: editExercise.editExerciseDifficulty
         id: editExercise.editExerciseId
     $http.put("/exercises/#{editExercise.editExerciseId}.json", data).success( (data) ->
       exercise = _.findWhere(exerciseData.data.exercises, { id: parseInt(editExercise.editExerciseId)})
       exercise.name = data.name
-      exercise.muscle = data.muscle
       exercise.exercise_type = data.exercise_type
       exercise.difficulty = data.difficulty
       console.log('Successfully edited exercise.')

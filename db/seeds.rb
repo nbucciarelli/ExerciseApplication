@@ -11,3 +11,15 @@ User.create({email: "test@example.com", password: "password", password_confirmat
 ['Abs', 'Shoulders', 'Back', 'Biceps', 'Chest'].each do |muscle|
   Muscle.create({name: muscle})
 end
+
+10.times do 
+  difficulty = case Random.rand(3)
+  when 0
+    "Easy"
+  when 1
+    "Medium"
+  when 2
+    "Hard"
+  end
+  Exercise.create({name: Faker::Lorem.words(3).join(" "), difficulty: difficulty, exercise_type: "Some shit"})
+end

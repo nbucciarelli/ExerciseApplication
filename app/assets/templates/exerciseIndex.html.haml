@@ -1,23 +1,21 @@
 .col-lg-3
+  .input-group
+    %input#srch-term.form-control{placeholder: "Search exercises", type: "text", ng: {model: "searchText"}}
+      .input-group-btn
+        %button.btn.btn-default{type: "submit"}
+          %i.glyphicon.glyphicon-search
+  %br
   .list-group
-    %a.list-group-item{href: 'javascript:void(0);'}
+    %a.list-group-item{href: 'javascript:void(0);', ng: { repeat: 'muscle in muscles.muscles' }}
       %span.pull-right.badge 12
-      %strong Abs
-    %a.list-group-item{href: 'javascript:void(0);'}
-      %span.pull-right.badge 12
-      %strong Back
-    %a.list-group-item{href: 'javascript:void(0);'}
-      %span.pull-right.badge 12
-      %strong Shoulders 
+      %strong {{ muscle.name }}
+
 .col-lg-9
   %a{ ng: { click: "navNewExercise()"} } New Exercise
-  .list-group{ ng: { repeat: "exercise in data.exercises"} }
+  .list-group{ ng: { repeat: "exercise in exercises.exercises | filter:searchText"} }
     %a.list-group-item{ ng: { click: "viewExercise(exercise.id)"} }
       %h4.list-group-item-heading {{ exercise.name }}
       %p.list-group-item-text
-        %strong Muscle:
-        {{ exercise.muscle }}
-        %br
         %strong Type:
         {{ exercise.exercise_type }}
         %br
