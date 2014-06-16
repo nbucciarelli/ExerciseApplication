@@ -27,6 +27,7 @@ angular.module('ExerciseApp').factory('exerciseData', ['$http', ($http) ->
         name: newExercise.newExerciseName
         exercise_type: newExercise.newExerciseExerciseType
         difficulty: newExercise.newExerciseDifficulty
+        muscle_ids: newExercise.newExerciseMuscles
 
     $http.post('/exercises.json', data).success( (data) ->
       exerciseData.data.exercises.push(data)

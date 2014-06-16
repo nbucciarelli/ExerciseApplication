@@ -25,7 +25,13 @@ class ExercisesController < ApplicationController
 
 private
   def exercise_params
-    params.require(:exercise).permit(:name, :muscle, :exercise_type, :difficulty)
+    params.require(:exercise).permit(
+      :name,
+      :muscle,
+      :exercise_type,
+      :difficulty,
+      { muscle_ids: [] }
+    )
   end
 
 

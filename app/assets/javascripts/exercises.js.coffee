@@ -8,7 +8,7 @@
 #= require_tree ./directives
 #= require_tree ./filters
 
-ExerciseApp = angular.module("ExerciseApp", ['ngRoute'])
+ExerciseApp = angular.module("ExerciseApp", ['ngRoute', 'multi-select'])
 
 ExerciseApp.config(['$routeProvider', ($routeProvider) ->
   $routeProvider.when('/exercises/new', { templateUrl: '../assets/exerciseNew.html', controller: 'ExerciseNewCtrl'})
