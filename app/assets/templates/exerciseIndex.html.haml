@@ -1,6 +1,16 @@
-%h1.text-center {{ title }}
-%a{ ng: { click: "navNewExercise()"} } New Exercise
-.row
+.col-lg-3
+  .list-group
+    %a.list-group-item{href: 'javascript:void(0);'}
+      %span.pull-right.badge 12
+      %strong Abs
+    %a.list-group-item{href: 'javascript:void(0);'}
+      %span.pull-right.badge 12
+      %strong Back
+    %a.list-group-item{href: 'javascript:void(0);'}
+      %span.pull-right.badge 12
+      %strong Shoulders 
+.col-lg-9
+  %a{ ng: { click: "navNewExercise()"} } New Exercise
   .list-group{ ng: { repeat: "exercise in data.exercises"} }
     %a.list-group-item{ ng: { click: "viewExercise(exercise.id)"} }
       %h4.list-group-item-heading {{ exercise.name }}

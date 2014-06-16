@@ -1,18 +1,10 @@
 class ExercisesController < ApplicationController
   def index
     @exercises = Exercise.all
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @exercises.as_json }
-    end
   end
 
   def create
     @exercise = Exercise.create exercise_params
-    respond_to do |format|
-      format.json { render json: @exercise.as_json }
-    end
   end
 
   def update

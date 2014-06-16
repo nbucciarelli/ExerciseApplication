@@ -14,6 +14,7 @@ gem 'letter_opener', group: :development
 gem 'quiet_assets', group: :development
 gem 'haml-rails'
 gem 'devise'
+gem 'rabl'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby

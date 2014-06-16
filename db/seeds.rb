@@ -6,3 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create({email: "test@example.com", password: "password", password_confirmation: "password"})
+
+['Abs', 'Shoulders', 'Back', 'Biceps', 'Chest'].each do |muscle|
+  Muscle.create({name: muscle})
+end
